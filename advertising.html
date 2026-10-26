@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertise With Us | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF; --dark:#1A1A1A;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif; scroll-behavior:smooth;}
+  
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+  
+  /* HERO */
+  .ad-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1557838923-298f30c57d9f?w=1200') center/cover; color:white; text-align:center; padding:100px 20px;}
+  .ad-hero h1{font-size:42px; margin-bottom:15px;}
+  .ad-hero p{font-size:18px; margin-bottom:25px;}
+  .btn{background:var(--orange); color:white; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; transition:.3s;}
+  .btn:hover{background:var(--blue); transform:translateY(-3px);}
+  .btn-green{background:var(--green);}
+  
+  /* STATS */
+  .stats{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:40px 5%; background:var(--light);}
+  .stat-box{background:white; padding:25px; border-radius:12px; text-align:center; width:220px; border-top:4px solid var(--orange);}
+  .stat-box h3{font-size:32px; color:var(--blue);}
+  .stat-box p{color:#555;}
+  
+  /* PACKAGES */
+  .section-title{text-align:center; color:var(--blue); font-size:32px; margin:50px 0 20px;}
+  .packages{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:25px; padding:20px 5% 60px;}
+  .package{background:white; border-radius:15px; padding:30px; box-shadow:0 5px 20px rgba(0,0,0,0.1); text-align:center; transition:.4s; border:2px solid transparent;}
+  .package:hover{transform:translateY(-8px); border-color:var(--orange);}
+  .package.featured{border-color:var(--orange); background:linear-gradient(180deg, #FFF8F0, white);}
+  .package h3{color:var(--blue); font-size:24px; margin-bottom:10px;}
+  .price{font-size:28px; color:var(--orange); font-weight:800; margin:15px 0;}
+  .features{list-style:none; text-align:left; margin:20px 0;}
+  .features li{margin:10px 0;} .features li i{color:var(--green); margin-right:8px;}
+  
+  /* PLATFORMS */
+  .platforms{background:var(--dark); color:white; padding:60px 5%; text-align:center;}
+  .platform-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin-top:30px;}
+  .platform{background:#222; padding:25px; border-radius:12px; width:250px;}
+  .platform i{font-size:40px; color:var(--orange); margin-bottom:10px;}
+  
+  /* HOW IT WORKS */
+  .steps{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px 5% 60px;}
+  .step{background:var(--light); padding:25px; border-radius:12px; width:280px; text-align:center;}
+  .step-number{background:var(--orange); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px; font-weight:800;}
+  
+  /* CTA */
+  .cta{background:linear-gradient(90deg, var(--orange), var(--blue)); color:white; text-align:center; padding:60px 20px;}
+  
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+  
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="gas.html">Gas</a>
+    <a href="advertising.html">Advertise</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ad-hero">
+  <h1>Advertise Your Business With Us</h1>
+  <p>Reach 10,000+ People in Kampala Through Our Website, WhatsApp Groups & TikTok</p>
+  <a href="#packages" class="btn">View Ad Packages</a>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20advertise%20my%20business" target="_blank" class="btn btn-green">WhatsApp Us Now</a>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat-box">
+    <h3>10K+</h3>
+    <p>WhatsApp Group Members</p>
+  </div>
+  <div class="stat-box">
+    <h3>5K+</h3>
+    <p>Monthly Website Visitors</p>
+  </div>
+  <div class="stat-box">
+    <h3>2K+</h3>
+    <p>TikTok Followers</p>
+  </div>
+  <div class="stat-box">
+    <h3>24/7</h3>
+    <p>Your Ad is Live</p>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <h2 class="section-title">Advertising Packages</h2>
+  <div class="packages">
+    
+    <div class="package">
+      <h3>Basic Ad</h3>
+      <div class="price">UGX 20,000</div>
+      <p>Perfect for small businesses</p>
+      <ul class="features">
+        <li><i class="fa-solid fa-check"></i> 1 Week on Website</li>
+        <li><i class="fa-solid fa-check"></i> 2 Posts in WhatsApp Groups</li>
+        <li><i class="fa-solid fa-check"></i> Business Logo + Contact</li>
+        <li><i class="fa-solid fa-check"></i> Free Ad Design</li>
+      </ul>
+      <a href="https://wa.me/256752937558?text=I%20want%20Basic%20Ad%20Package" target="_blank" class="btn">Order Now</a>
+    </div>
+
+    <div class="package featured">
+      <h3>Pro Ad</h3>
+      <div class="price">UGX 50,000</div>
+      <p>Most Popular</p>
+      <ul class="features">
+        <li><i class="fa-solid fa-check"></i> 2 Weeks on Website Homepage</li>
+        <li><i class="fa-solid fa-check"></i> 5 Posts in All WhatsApp Groups</li>
+        <li><i class="fa-solid fa-check"></i> Featured on WhatsApp Channel</li>
+        <li><i class="fa-solid fa-check"></i> 1 TikTok Video Mention</li>
+        <li><i class="fa-solid fa-check"></i> Priority Support</li>
+      </ul>
+      <a href="https://wa.me/256752937558?text=I%20want%20Pro%20Ad%20Package" target="_blank" class="btn">Order Now</a>
+    </div>
+
+    <div class="package">
+      <h3>Premium Ad</h3>
+      <div class="price">UGX 100,000</div>
+      <p>Maximum Exposure</p>
+      <ul class="features">
+        <li><i class="fa-solid fa-check"></i> 1 Month on Website + Banner</li>
+        <li><i class="fa-solid fa-check"></i> Daily Posts in WhatsApp Groups</li>
+        <li><i class="fa-solid fa-check"></i> Featured on Channel + Status</li>
+        <li><i class="fa-solid fa-check"></i> 3 TikTok Videos</li>
+        <li><i class="fa-solid fa-check"></i> Blog Post About Your Business</li>
+      </ul>
+      <a href="https://wa.me/256752937558?text=I%20want%20Premium%20Ad%20Package" target="_blank" class="btn">Order Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHERE WE ADVERTISE -->
+<section class="platforms">
+  <h2 class="section-title" style="color:white;">Where Your Ad Will Appear</h2>
+  <div class="platform-grid">
+    <div class="platform">
+      <i class="fa-solid fa-globe"></i>
+      <h3>Website</h3>
+      <p>Homepage banner + Services page</p>
+    </div>
+    <div class="platform">
+      <i class="fab fa-whatsapp"></i>
+      <h3>WhatsApp Groups</h3>
+      <p>Rentals Group + Business Group</p>
+    </div>
+    <div class="platform">
+      <i class="fab fa-whatsapp"></i>
+      <h3>WhatsApp Channel</h3>
+      <p>Daily updates to all followers</p>
+    </div>
+    <div class="platform">
+      <i class="fab fa-tiktok"></i>
+      <h3>TikTok</h3>
+      <p>Video ads to local audience</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <h2 class="section-title">How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Contact Us</h3>
+      <p>WhatsApp us your business details and logo</p>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>We Design</h3>
+      <p>We create a professional ad for you for free</p>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>We Advertise</h3>
+      <p>Your ad goes live on all our platforms</p>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <h3>Get Customers</h3>
+      <p>Start receiving calls and WhatsApp inquiries</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Grow Your Business?</h2>
+  <p style="font-size:18px; margin:15px 0;">Join 50+ businesses already advertising with us</p>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20advertise" target="_blank" class="btn" style="background:white; color:var(--blue);">Start Advertising Today</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937

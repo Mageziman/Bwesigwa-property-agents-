@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+  .reviews-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(255,111,0,0.8)); color:white; text-align:center; padding:80px 20px;}
+  .reviews-hero h1{font-size:38px; margin-bottom:10px;}
+  .overall-rating{text-align:center; padding:30px 5%; background:var(--light);}
+  .overall-rating .big-score{font-size:60px; color:var(--orange); font-weight:800;}
+  .overall-rating p{color:#333; font-size:16px;}
+  .reviews-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:25px; padding:40px 5% 60px;}
+  .review-card{background:white; padding:25px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.08); border-top:3px solid var(--orange);}
+  .review-header{margin-bottom:12px;}
+  .client-name{font-weight:800; color:var(--blue); font-size:18px;}
+  .verified{font-size:12px; color:#666; margin-top:3px;}
+  .verified i{color:var(--green); margin-right:4px;}
+  .stars{color:#FFD700; font-size:15px; margin:10px 0;}
+  .review-text{color:#333; line-height:1.7; margin-bottom:12px; font-size:15px;}
+  .review-meta{font-size:12px; color:#777;}
+  .review-meta span{background:var(--light); padding:4px 10px; border-radius:20px; margin-right:6px; display:inline-block; margin-bottom:5px;}
+  .review-meta i{color:var(--orange); margin-right:4px;}
+  .add-review{text-align:center; padding:50px 20px; background:var(--light);}
+  .add-review h2{color:var(--blue); margin-bottom:10px;}
+  .btn{background:var(--green); color:white; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block;}
+  .btn:hover{opacity:0.9;}
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; z-index:999;}
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a> 
+    <a href="reviews.html">Reviews</a> 
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="reviews-hero">
+  <h1><i class="fa-solid fa-star"></i> Client Testimonials</h1>
+  <p>Real feedback from real people we’ve helped across Kampala</p>
+</section>
+
+<div class="overall-rating">
+  <div class="big-score">4.9 <i class="fa-solid fa-star" style="font-size:30px;"></i></div>
+  <p><strong>200+ Happy Clients</strong> • Wampewo • Kasangati • Kampala</p>
+</div>
+
+<div class="reviews-grid">
+
+  <!-- REVIEW 1 -->
+  <div class="review-card">
+    <div class="review-header">
+      <div class="client-name" contenteditable="true">Nakato Amina</div>
+      <div class="verified"><i class="fa-solid fa-circle-check"></i> Verified Client</div>
+    </div>
+    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <p class="review-text" contenteditable="true">"I was looking for a single room in Wampewo for my sister. Bwesigwa team showed me 3 options in 1 day and helped me negotiate the price. Very professional and no hidden fees."</p>
+    <div class="review-meta">
+      <span><i class="fa-solid fa-house"></i> <span contenteditable="true">Single Room</span></span>
+      <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Wampewo</span></span>
+      <span><i class="fa-solid fa-calendar"></i> <span contenteditable="true">Feb 2026</span></span>
+    </div>
+  </div>
+
+  <!-- REVIEW 2 -->
+  <div class="review-card">
+    <div class="review-header">
+      <div class="client-name" contenteditable="true">Musa Kato</div>
+      <div class="verified"><i class="fa-solid fa-circle-check"></i> Verified Client</div>
+    </div>
+    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <p class="review-text" contenteditable="true">"Bought a 50x100 plot in Kasangati through them. They were transparent about the title and even connected me to a lawyer. No drama. Highly recommend Bwesigwa."</p>
+    <div class="review-meta">
+      <span><i class="fa-solid fa-map"></i> <span contenteditable="true">Land Purchase</span></span>
+      <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kasangati</span></span>
+      <span><i class="fa-solid fa-calendar"></i> <span contenteditable="true">Jan 2026</span></span>
+    </div>
+  </div>
+
+  <!-- REVIEW 3 -->
+  <div class="review-card">
+    <div class="review-header">
+      <div class="client-name" contenteditable="true">David Lwanga</div>
+      <div class="verified"><i class="fa-solid fa-circle-check"></i> Verified Client</div>
+    </div>
+    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <p class="review-text" contenteditable="true">"Best gas delivery service in Wampewo. Always on time and the price is fair. I’ve been using them for 6 months now."</p>
+    <div class="review-meta">
+      <span><i class="fa-solid fa-fire"></i> <span contenteditable="true">Gas Delivery</span></span>
+      <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Wampewo</span></span>
+      <span><i class="fa-solid fa-calendar"></i> <span contenteditable="true">Mar 2026</span></span>
+    </div>
+  </div>
+
+  <!-- TEMPLATE -->
+  <div class="review-card">
+    <div class="review-header">
+      <div class="client-name" contenteditable="true">Client Name</div>
+      <div class="verified"><i class="fa-solid fa-circle-check"></i> Verified Client</div>
+    </div>
+    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <p class="review-text" contenteditable="true">Write what the client said about your service here...</p>
+    <div class="review-meta">
+      <span><i class="fa-solid fa-house"></i> <span contenteditable="true">Service Type</span></span>
+      <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span></span>
+      <span><i class="fa-solid fa-calendar"></i> <span contenteditable="true">Month Year</span></span>
+    </div>
+  </div>
+
+</div>
+
+<section class="add-review">
+  <h2>Have we helped you?</h2>
+  <p>Send us your review on WhatsApp and we’ll feature it here</p>
+  <a href="https://wa.me/256752937558?text=Hello%20I%20want%20to%20leave%20a%20review" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Send Review</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+<a href="https://wa.me/256752937558" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>

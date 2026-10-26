@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News & Updates | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF; --dark:#1A1A1A;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+
+  /* HERO */
+  .blog-hero{background: linear-gradient(rgba(13,71,161,0.85), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
+  .blog-hero h1{font-size:40px; margin-bottom:10px;}
+
+  /* CATEGORIES */
+  .categories{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; padding:20px 5%; background:var(--light);}
+  .cat-btn{background:white; border:2px solid var(--blue); color:var(--blue); padding:8px 18px; border-radius:20px; text-decoration:none; font-weight:600; transition:.3s;}
+  .cat-btn:hover, .cat-btn.active{background:var(--blue); color:white;}
+
+  /* BLOG GRID */
+  .container{max-width:1200px; margin:0 auto; padding:40px 5%;}
+  .blog-grid{display:grid; grid-template-columns: 2fr 1fr; gap:30px;}
+  
+  .main-posts{display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:25px;}
+  
+  .post-card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:.4s;}
+  .post-card:hover{transform:translateY(-6px);}
+  .post-card img{width:100%; height:220px; object-fit:cover;}
+  .post-body{padding:20px;}
+  .post-meta{color:#777; font-size:13px; margin-bottom:8px;}
+  .post-meta i{color:var(--orange); margin-right:5px;}
+  .post-title{font-size:20px; color:var(--blue); margin-bottom:10px; font-weight:700;}
+  .post-excerpt{color:#555; font-size:14px; line-height:1.6; margin-bottom:15px;}
+  .read-more{color:var(--orange); text-decoration:none; font-weight:700;}
+  .read-more:hover{text-decoration:underline;}
+
+  /* SIDEBAR */
+  .sidebar .widget{background:white; padding:20px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  .widget h3{color:var(--blue); margin-bottom:15px; border-left:4px solid var(--orange); padding-left:10px;}
+  .recent-post{display:flex; gap:10px; margin-bottom:12px;}
+  .recent-post img{width:60px; height:60px; border-radius:8px; object-fit:cover;}
+  .recent-post a{color:var(--dark); text-decoration:none; font-size:14px; font-weight:600;}
+  .recent-post a:hover{color:var(--orange);}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+
+  @media(max-width:900px){.blog-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="gas.html">Gas</a>
+    <a href="blog.html">News</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <h1><i class="fa-solid fa-newspaper"></i> News & Updates</h1>
+  <p>Property Tips, Market News, and Business Updates from Kampala</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <a href="#" class="cat-btn active">All</a>
+  <a href="#" class="cat-btn">Rentals</a>
+  <a href="#" class="cat-btn">Land</a>
+  <a href="#" class="cat-btn">Gas</a>
+  <a href="#" class="cat-btn">Business Tips</a>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="blog-grid">
+
+    <!-- MAIN POSTS -->
+    <div class="main-posts">
+
+      <!-- POST 1 - EDIT THIS -->
+      <div class="post-card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600" alt="Rental Tips">
+        <div class="post-body">
+          <div class="post-meta">
+            <i class="fa-solid fa-calendar"></i> April 15, 2026 
+            <i class="fa-solid fa-folder"></i> Rentals
+          </div>
+          <h3 class="post-title" contenteditable="true">5 Things to Check Before Renting in Kampala 2026</h3>
+          <p class="post-excerpt" contenteditable="true">Renting a new place? Don't make these costly mistakes. Learn how to verify landlords, check water, security, and avoid rental scams in Kampala...</p>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- POST 2 - EDIT THIS -->
+      <div class="post-card">
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600" alt="Land Investment">
+        <div class="post-body">
+          <div class="post-meta">
+            <i class="fa-solid fa-calendar"></i> April 10, 2026 
+            <i class="fa-solid fa-folder"></i> Land
+          </div>
+          <h3 class="post-title" contenteditable="true">Why Wampewo is the Next Big Area for Land Investment</h3>
+          <p class="post-excerpt" contenteditable="true">Land prices in Wampewo have grown by 30% in the last year. Here’s why investors are buying now before prices go higher...</p>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- POST 3 - EDIT THIS -->
+      <div class="post-card">
+        <img src="https://images.unsplash.com/photo-1581094794329-c927dd94c5b1?w=600" alt="Gas Safety">
+        <div class="post-body">
+          <div class="post-meta">
+            <i class="fa-solid fa-calendar"></i> April 5, 2026 
+            <i class="fa-solid fa-folder"></i> Gas
+          </div>
+          <h3 class="post-title" contenteditable="true">Gas Safety: 3 Mistakes That Cause Kitchen Fires</h3>
+          <p class="post-excerpt" contenteditable="true">Most gas accidents are preventable. Learn the 3 common mistakes and how to safely use your cylinder at home...</p>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- POST 4 - TEMPLATE - COPY TO ADD MORE -->
+      <div class="post-card">
+        <img src="https://via.placeholder.com/600x220/0D47A1/FFFFFF?text=BLOG+IMAGE" alt="News">
+        <div class="post-body">
+          <div class="post-meta">
+            <i class="fa-solid fa-calendar"></i> <span contenteditable="true">Add Date</span>
+            <i class="fa-solid fa-folder"></i> <span contenteditable="true">Category</span>
+          </div>
+          <h3 class="post-title" contenteditable="true">Your News Title Here</h3>
+          <p class="post-excerpt" contenteditable="true">Write your news update or blog post here. Talk about property market, tips, or business advice...</p>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      
+      <div class="widget">
+        <h3>About Us</h3>
+        <p style="color:#555; line-height:1.6;">Bwesigwa Property Agents brings you the latest in real estate, gas, and business news in Kampala. Your trusted partner since 2015.</p>
+      </div>
+
+      <div class="widget">
+        <h3>Recent Updates</h3>
+        <div class="recent-post">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100">
+          <a href="#" contenteditable="true">5 Things to Check Before Renting</a>
+        </div>
+        <div class="recent-post">
+          <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=100">
+          <a href="#" contenteditable="true">Why Wampewo Land is Booming</a>
+        </div>
+        <div class="recent-post">
+          <img src="https://images.unsplash.com/photo-1581094794329-c927dd94c5b1?w=100">
+          <a href="#" contenteditable="true">Gas Safety Tips for Homes</a>
+        </div>
+      </div>
+
+      <div class="widget">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-phone" style="color:var(--orange);"></i> 0752 937 558</p>
+        <p><i class="fa-solid fa-envelope" style="color:var(--orange);"></i> trevojam@gmail.com</p>
+        <a href="https://wa.me/256752937558" target="_blank" style="background:var(--green); color:white; padding:10px; border-radius:8px; text-decoration:none; display:block; text-align:center; margin-top:10px;">WhatsApp Us</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

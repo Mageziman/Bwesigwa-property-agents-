@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF; --gray:#F1F3F6;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+
+  /* HERO */
+  .partners-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
+  .partners-hero h1{font-size:40px; margin-bottom:10px;}
+
+  /* PARTNERS GRID */
+  .section-title{text-align:center; color:var(--blue); font-size:32px; margin:50px 0 20px;}
+  .partners-container{max-width:1200px; margin:0 auto; padding:20px 5% 60px;}
+  .partners-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px;}
+
+  .partner-card{background:white; border-radius:15px; padding:25px; box-shadow:0 4px 20px rgba(0,0,0,0.1); text-align:center; transition:.4s; border-bottom:4px solid var(--orange);}
+  .partner-card:hover{transform:translateY(-8px);}
+  .partner-logo{width:100px; height:100px; margin:0 auto 15px; background:var(--gray); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--blue);}
+  .partner-logo img{width:100%; height:100%; object-fit:contain; border-radius:12px;}
+  .partner-name{font-size:22px; color:var(--blue); font-weight:800; margin-bottom:8px;}
+  .partner-type{background:var(--orange); color:white; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700; display:inline-block; margin-bottom:12px;}
+  .partner-desc{color:#555; font-size:14px; line-height:1.6; margin-bottom:15px; min-height:50px;}
+  .partner-info{color:#666; font-size:14px; margin-bottom:15px;}
+  .partner-info i{color:var(--orange); margin-right:5px;}
+  .partner-btns{display:flex; gap:10px; justify-content:center;}
+  .btn{background:var(--blue); color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700; flex:1;}
+  .btn-whatsapp{background:var(--green);}
+  .btn:hover{opacity:0.9;}
+
+  /* CTA */
+  .join-cta{background:var(--light); text-align:center; padding:50px 20px;}
+  .join-cta h2{color:var(--blue); margin-bottom:10px;}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="partners.html">Partners</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="partners-hero">
+  <h1><i class="fa-solid fa-building"></i> Our Partner Companies</h1>
+  <p>Trusted Companies We Collaborate With in Real Estate & Construction</p>
+</section>
+
+<!-- PARTNERS LIST -->
+<section>
+  <h2 class="section-title">Featured Partners</h2>
+  <div class="partners-container">
+    <div class="partners-grid">
+
+      <!-- PARTNER 1 - EXAMPLE: CENTURY REAL ESTATE -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="https://via.placeholder.com/100/0D47A1/FFFFFF?text=CRE" alt="Century Real Estate">
+        </div>
+        <h3 class="partner-name" contenteditable="true">Century Real Estate</h3>
+        <span class="partner-type" contenteditable="true">Real Estate Developers</span>
+        <p class="partner-desc" contenteditable="true">Leading developers of modern apartments and gated communities in Kampala. Quality homes with flexible payment plans.</p>
+        <div class="partner-info">
+          <div><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kololo, Kampala</span></div>
+          <div><i class="fa-solid fa-phone"></i> <span contenteditable="true">0700 111 222</span></div>
+        </div>
+        <div class="partner-btns">
+          <a href="https://wa.me/256700111222?text=Hello%20Century%20Real%20Estate" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn"><i class="fa-solid fa-globe"></i> Website</a>
+        </div>
+      </div>
+
+      <!-- PARTNER 2 - EXAMPLE: DRAKE CONSTRUCTION COMPANY -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="https://via.placeholder.com/100/FF6F00/FFFFFF?text=DCC" alt="Drake Construction">
+        </div>
+        <h3 class="partner-name" contenteditable="true">Drake Construction Company</h3>
+        <span class="partner-type" contenteditable="true">Construction & Building</span>
+        <p class="partner-desc" contenteditable="true">Professional construction services. Houses, apartments, renovations. 10+ years experience with quality materials.</p>
+        <div class="partner-info">
+          <div><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Nansana, Wakiso</span></div>
+          <div><i class="fa-solid fa-phone"></i> <span contenteditable="true">0788 333 444</span></div>
+        </div>
+        <div class="partner-btns">
+          <a href="https://wa.me/256788333444?text=Hello%20Drake%20Construction" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+
+      <!-- PARTNER 3 - TEMPLATE: COPY THIS TO ADD MORE -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <h3 class="partner-name" contenteditable="true">Company Name Here</h3>
+        <span class="partner-type" contenteditable="true">Business Type</span>
+        <p class="partner-desc" contenteditable="true">Write a short description about what this company does and their services...</p>
+        <div class="partner-info">
+          <div><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span></div>
+          <div><i class="fa-solid fa-phone"></i> <span contenteditable="true">Phone Number</span></div>
+        </div>
+        <div class="partner-btns">
+          <a href="https://wa.me/2567XXXXXXXXX?text=Hello" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+
+      <!-- PARTNER 4 - TEMPLATE -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <h3 class="partner-name" contenteditable="true">Another Company</h3>
+        <span class="partner-type" contenteditable="true">e.g Land Surveyors</span>
+        <p class="partner-desc" contenteditable="true">Add company description here. Edit directly on the page.</p>
+        <div class="partner-info">
+          <div><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kampala</span></div>
+          <div><i class="fa-solid fa-phone"></i> <span contenteditable="true">0700 000 000</span></div>
+        </div>
+        <div class="partner-btns">
+          <a href="https://wa.me/2567XXXXXXXXX?text=Hello" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JOIN CTA -->
+<section class="join-cta">
+  <h2>Want to Become Our Partner?</h2>
+  <p>Join our network of trusted real estate and construction companies</p>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20become%20a%20partner" target="_blank" class="btn" style="background:var(--orange); padding:14px 28px; font-size:16px;">Contact Us on WhatsApp</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=Hello%20about%20partnership" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

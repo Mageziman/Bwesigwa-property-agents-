@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Hand Market | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF; --red:#E53935;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+
+  /* HERO */
+  .market-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9d?w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
+  .market-hero h1{font-size:40px; margin-bottom:10px;}
+  .btn{background:var(--orange); color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; margin:5px;}
+
+  /* FILTERS */
+  .filters{background:var(--light); padding:20px 5%; display:flex; flex-wrap:wrap; gap:10px; justify-content:center;}
+  .filters select, .filters input{padding:10px; border:2px solid #ddd; border-radius:8px; font-size:14px;}
+
+  /* PRODUCTS GRID */
+  .section-title{text-align:center; color:var(--blue); font-size:30px; margin:40px 0 20px;}
+  .products-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:25px; padding:20px 5% 60px;}
+
+  .product-card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:.4s; position:relative;}
+  .product-card:hover{transform:translateY(-8px);}
+  .product-card img{width:100%; height:220px; object-fit:cover;}
+  .condition-badge{position:absolute; top:10px; right:10px; background:var(--red); color:white; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;}
+  .condition-badge.used{background:var(--orange);}
+  .condition-badge.like-new{background:var(--green);}
+  
+  .product-body{padding:15px;}
+  .product-category{color:var(--orange); font-size:12px; font-weight:700; text-transform:uppercase;}
+  .product-title{font-size:18px; color:var(--blue); margin:5px 0; font-weight:700;}
+  .product-price{font-size:22px; color:var(--red); font-weight:800; margin:8px 0;}
+  .product-info{color:#666; font-size:14px; margin-bottom:10px;}
+  .product-info i{color:var(--orange); margin-right:5px;}
+  .product-desc{color:#555; font-size:14px; margin-bottom:15px; min-height:40px;}
+  
+  .btn-group{display:flex; gap:8px;}
+  .btn-whatsapp{background:var(--green); flex:1; text-align:center;}
+  .btn-call{background:var(--blue); flex:1; text-align:center;}
+  .btn:hover{opacity:0.9;}
+
+  /* SELL CTA */
+  .sell-cta{background:var(--light); text-align:center; padding:50px 20px;}
+  .sell-cta h2{color:var(--blue); font-size:28px; margin-bottom:10px;}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>MARKET</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="market.html">Used Items</a>
+    <a href="ads.html">Business Ads</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="market-hero">
+  <h1><i class="fa-solid fa-tag"></i> Second Hand Market</h1>
+  <p>Buy & Sell Quality Used Items in Kampala - Phones, Furniture, Cars & More</p>
+  <a href="#products" class="btn">Browse Items</a>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20sell%20an%20item" target="_blank" class="btn" style="background:var(--green);">Sell Your Item</a>
+</section>
+
+<!-- FILTERS -->
+<section class="filters">
+  <input type="text" placeholder="Search item...">
+  <select>
+    <option>All Categories</option>
+    <option>Phones & Electronics</option>
+    <option>Furniture</option>
+    <option>Cars & Motorcycles</option>
+    <option>Home Appliances</option>
+    <option>Clothes & Shoes</option>
+  </select>
+  <select>
+    <option>All Locations</option>
+    <option>Wampewo</option>
+    <option>Kasangati</option>
+    <option>Kampala</option>
+  </select>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2 class="section-title">Latest Used Items</h2>
+  <div class="products-grid">
+
+    <!-- ITEM 1 - EDIT THIS -->
+    <div class="product-card">
+      <span class="condition-badge used">USED</span>
+      <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600" alt="iPhone">
+      <div class="product-body">
+        <div class="product-category">Phones & Electronics</div>
+        <h3 class="product-title" contenteditable="true">iPhone 12 Pro Max 256GB</h3>
+        <div class="product-price" contenteditable="true">UGX 1,200,000</div>
+        <div class="product-info">
+          <i class="fa-solid fa-location-dot"></i> Wampewo 
+          <i class="fa-solid fa-calendar"></i> Used 8 months
+        </div>
+        <p class="product-desc" contenteditable="true">Clean phone, no cracks. Comes with charger and 2 covers. Battery health 88%</p>
+        <div class="btn-group">
+          <a href="https://wa.me/256752937558?text=I%20am%20interested%20in%20iPhone%2012" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0752937558" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2 - EDIT THIS -->
+    <div class="product-card">
+      <span class="condition-badge like-new">LIKE NEW</span>
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600" alt="Sofa">
+      <div class="product-body">
+        <div class="product-category">Furniture</div>
+        <h3 class="product-title" contenteditable="true">5 Seater Sofa Set</h3>
+        <div class="product-price" contenteditable="true">UGX 450,000</div>
+        <div class="product-info">
+          <i class="fa-solid fa-location-dot"></i> Kasangati 
+          <i class="fa-solid fa-calendar"></i> Used 1 year
+        </div>
+        <p class="product-desc" contenteditable="true">Brown leather sofa. Very comfortable. No damages. Free delivery in Kampala</p>
+        <div class="btn-group">
+          <a href="https://wa.me/256752937558?text=I%20am%20interested%20in%20Sofa%20Set" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0752937558" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3 - EDIT THIS -->
+    <div class="product-card">
+      <span class="condition-badge used">USED</span>
+      <img src="https://images.unsplash.com/photo-1494972686240-8d1d4e67b4b2?w=600" alt="Car">
+      <div class="product-body">
+        <div class="product-category">Cars & Motorcycles</div>
+        <h3 class="product-title" contenteditable="true">Toyota Premio 2010</h3>
+        <div class="product-price" contenteditable="true">UGX 18,500,000</div>
+        <div class="product-info">
+          <i class="fa-solid fa-location-dot"></i> Kampala 
+          <i class="fa-solid fa-calendar"></i> 145,000 KM
+        </div>
+        <p class="product-desc" contenteditable="true">Automatic, petrol, well maintained. All documents available. Slightly negotiable</p>
+        <div class="btn-group">
+          <a href="https://wa.me/256752937558?text=I%20am%20interested%20in%20Toyota%20Premio" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0752937558" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 4 - EDIT THIS -->
+    <div class="product-card">
+      <span class="condition-badge used">USED</span>
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Fridge">
+      <div class="product-body">
+        <div class="product-category">Home Appliances</div>
+        <h3 class="product-title" contenteditable="true">Samsung Double Door Fridge</h3>
+        <div class="product-price" contenteditable="true">UGX 350,000</div>
+        <div class="product-info">
+          <i class="fa-solid fa-location-dot"></i> Wampewo 
+          <i class="fa-solid fa-calendar"></i> Used 2 years
+        </div>
+        <p class="product-desc" contenteditable="true">Working perfectly. Big freezer. Comes with 3 months warranty from us</p>
+        <div class="btn-group">
+          <a href="https://wa.me/256752937558?text=I%20am%20interested%20in%20Fridge" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0752937558" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 5 - TEMPLATE - COPY TO ADD MORE -->
+    <div class="product-card">
+      <span class="condition-badge used">USED</span>
+      <img src="https://via.placeholder.com/600x220/0D47A1/FFFFFF?text=YOUR+ITEM+PHOTO" alt="Item">
+      <div class="product-body">
+        <div class="product-category" contenteditable="true">Category</div>
+        <h3 class="product-title" contenteditable="true">Item Name Here</h3>
+        <div class="product-price" contenteditable="true">UGX 00,000</div>
+        <div class="product-info">
+          <i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span>
+          <i class="fa-solid fa-calendar"></i> <span contenteditable="true">Condition</span>
+        </div>
+        <p class="product-desc" contenteditable="true">Describe the item, condition, and what comes with it...</p>
+        <div class="btn-group">
+          <a href="https://wa.me/256752937558?text=I%20am%20interested%20in%20this%20item" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0752937558" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SELL CTA -->
+<section class="sell-cta">
+  <h2>Have Something to Sell?</h2>
+  <p>We will advertise your used item for free and connect you to buyers</p>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20sell%20my%20item%3A" target="_blank" class="btn" style="background:var(--green); font-size:18px;">Post Your Item on WhatsApp</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=I%20want%20to%20buy%20or%20sell" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

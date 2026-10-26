@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+  .faq-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(255,111,0,0.8)); color:white; text-align:center; padding:80px 20px;}
+  .faq-container{max-width:900px; margin:40px auto; padding:0 5%;}
+  .faq-item{background:white; margin-bottom:15px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); overflow:hidden;}
+  .faq-question{padding:20px; background:var(--light); cursor:pointer; font-weight:700; color:var(--blue); display:flex; justify-content:space-between;}
+  .faq-answer{padding:20px; display:none; color:#555; line-height:1.7;}
+  .faq-item.active .faq-answer{display:block;}
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px;}
+  footer{background:#111; color:#aaa; text-align:center; padding:20px; margin-top:50px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div><a href="index.html">Home</a> <a href="faq.html">FAQ</a> <a href="contact.html">Contact</a></div>
+</nav>
+
+<section class="faq-hero">
+  <h1><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h1>
+</section>
+
+<div class="faq-container">
+  <div class="faq-item">
+    <div class="faq-question">How much is the agent fee? <i class="fa-solid fa-plus"></i></div>
+    <div class="faq-answer">Our agent fee is 10% of 1 month rent for rentals. For land sales, it's 5% of the selling price. This is standard in Kampala.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Do you accept 1 month or 3 months rent? <i class="fa-solid fa-plus"></i></div>
+    <div class="faq-answer">Yes, some landlords accept 1 month + deposit. Most prefer 6 months. We will help you negotiate with the landlord.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Are your guest houses available for 1 night? <i class="fa-solid fa-plus"></i></div>
+    <div class="faq-answer">Yes! We have guest houses from UGX 30,000 per night. Contact us on WhatsApp to check availability.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">How do I know the land has a genuine title? <i class="fa-solid fa-plus"></i></div>
+    <div class="faq-answer">We only list land with verified documents. We advise you to do a search at the Ministry of Lands before payment. We can connect you to a lawyer.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Do you deliver gas? <i class="fa-solid fa-plus"></i></div>
+    <div class="faq-answer">Yes, we do gas refilling and delivery in Wampewo and Kasangati. Call or WhatsApp us to order.</div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+});
+</script>
+
+<footer>© 2026 Bwesigwa Property Agents</footer>
+<a href="https://wa.me/256752937558" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>

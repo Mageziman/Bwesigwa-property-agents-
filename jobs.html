@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs & Careers | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF; --purple:#6A1B9A;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+
+  /* HERO */
+  .jobs-hero{background: linear-gradient(rgba(13,71,161,0.9), rgba(106,27,154,0.8)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
+  .jobs-hero h1{font-size:40px; margin-bottom:10px;}
+  .btn{background:var(--orange); color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; margin:5px;}
+
+  /* TABS */
+  .tabs{display:flex; justify-content:center; gap:10px; padding:20px 5%; background:var(--light);}
+  .tab-btn{background:white; border:2px solid var(--blue); color:var(--blue); padding:12px 25px; border-radius:8px; font-weight:700; cursor:pointer;}
+  .tab-btn.active{background:var(--blue); color:white;}
+
+  /* JOB CARDS */
+  .section-title{text-align:center; color:var(--blue); font-size:30px; margin:40px 0 20px;}
+  .jobs-container{max-width:1200px; margin:0 auto; padding:20px 5% 60px;}
+  .jobs-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px;}
+
+  .job-card{background:white; border-radius:12px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); border-left:5px solid var(--orange); transition:.4s;}
+  .job-card:hover{transform:translateY(-5px);}
+  .job-type{font-size:12px; background:var(--light); color:var(--blue); padding:4px 10px; border-radius:20px; font-weight:700; display:inline-block;}
+  .job-title{font-size:20px; color:var(--blue); margin:10px 0; font-weight:800;}
+  .job-company{color:#555; font-weight:600;}
+  .job-details{display:flex; gap:15px; flex-wrap:wrap; margin:10px 0; color:#666; font-size:14px;}
+  .job-details i{color:var(--orange);}
+  .job-desc{color:#555; margin:12px 0; line-height:1.6;}
+  .job-salary{color:var(--green); font-size:18px; font-weight:800;}
+  .apply-btn{background:var(--green); color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; margin-top:10px;}
+
+  /* SEEKER CARD */
+  .seeker-card{background:white; border-radius:12px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); border-left:5px solid var(--purple);}
+  .seeker-name{font-size:20px; color:var(--purple); font-weight:800;}
+  .seeker-skill{background:var(--purple); color:white; padding:4px 10px; border-radius:20px; font-size:12px; margin-right:5px;}
+
+  /* POST JOB CTA */
+  .post-cta{background:var(--light); text-align:center; padding:50px 20px;}
+  .post-cta h2{color:var(--blue); margin-bottom:10px;}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+  .hidden{display:none;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>JOBS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="market.html">Market</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="jobs-hero">
+  <h1><i class="fa-solid fa-briefcase"></i> Jobs & Careers Center</h1>
+  <p>Find Your Next Job | Post a Job Vacancy</p>
+  <a href="#jobs" class="btn">Find Jobs</a>
+  <a href="#post" class="btn" style="background:var(--green);">Post a Job</a>
+</section>
+
+<!-- TABS -->
+<section class="tabs">
+  <button class="tab-btn active" onclick="showTab('jobs')">Available Jobs</button>
+  <button class="tab-btn" onclick="showTab('seekers')">Job Seekers</button>
+</section>
+
+<!-- JOBS SECTION -->
+<div class="jobs-container" id="jobs">
+  <h2 class="section-title">Latest Job Openings</h2>
+  <div class="jobs-grid">
+
+    <!-- JOB 1 - EDIT THIS BLOCK -->
+    <div class="job-card">
+      <span class="job-type" contenteditable="true">Full Time</span>
+      <h3 class="job-title" contenteditable="true">Sales Agent Needed</h3>
+      <div class="job-company" contenteditable="true">ABC Company Ltd</div>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kampala</span></span>
+        <span><i class="fa-solid fa-clock"></i> <span contenteditable="true">8am - 5pm</span></span>
+        <span><i class="fa-solid fa-calendar"></i> <span contenteditable="true">Posted: 2 days ago</span></span>
+      </div>
+      <p class="job-desc" contenteditable="true">We need energetic sales agents to sell our products. Commission + Salary. Experience is an added advantage.</p>
+      <div class="job-salary" contenteditable="true">Salary: UGX 300,000 + Commission</div>
+      <a href="https://wa.me/256752937558?text=I%20am%20applying%20for%20Sales%20Agent%20job" target="_blank" class="apply-btn"><i class="fab fa-whatsapp"></i> Apply Now</a>
+    </div>
+
+    <!-- JOB 2 - EDIT THIS BLOCK -->
+    <div class="job-card">
+      <span class="job-type" contenteditable="true">Part Time</span>
+      <h3 class="job-title" contenteditable="true">Waitress / Waiter</h3>
+      <div class="job-company" contenteditable="true">Mama's Restaurant</div>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Wampewo</span></span>
+        <span><i class="fa-solid fa-clock"></i> <span contenteditable="true">Evening Shift</span></span>
+      </div>
+      <p class="job-desc" contenteditable="true">Friendly staff needed for busy restaurant. Good customer service skills required.</p>
+      <div class="job-salary" contenteditable="true">Salary: UGX 150,000</div>
+      <a href="https://wa.me/256752937558?text=I%20am%20applying%20for%20Waitress%20job" target="_blank" class="apply-btn"><i class="fab fa-whatsapp"></i> Apply Now</a>
+    </div>
+
+    <!-- JOB 3 - EDIT THIS BLOCK -->
+    <div class="job-card">
+      <span class="job-type" contenteditable="true">Contract</span>
+      <h3 class="job-title" contenteditable="true">House Cleaner</h3>
+      <div class="job-company" contenteditable="true">Private Home</div>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kasangati</span></span>
+      </div>
+      <p class="job-desc" contenteditable="true">Reliable person needed to clean house 3 times a week. Accommodation can be provided.</p>
+      <div class="job-salary" contenteditable="true">Salary: UGX 200,000</div>
+      <a href="https://wa.me/256752937558?text=I%20am%20applying%20for%20House%20Cleaner%20job" target="_blank" class="apply-btn"><i class="fab fa-whatsapp"></i> Apply Now</a>
+    </div>
+
+    <!-- JOB TEMPLATE - COPY TO ADD MORE -->
+    <div class="job-card">
+      <span class="job-type" contenteditable="true">Job Type</span>
+      <h3 class="job-title" contenteditable="true">Job Title Here</h3>
+      <div class="job-company" contenteditable="true">Company Name</div>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span></span>
+        <span><i class="fa-solid fa-clock"></i> <span contenteditable="true">Working Hours</span></span>
+      </div>
+      <p class="job-desc" contenteditable="true">Job description and requirements go here. Edit this text.</p>
+      <div class="job-salary" contenteditable="true">Salary: UGX 000,000</div>
+      <a href="https://wa.me/256752937558?text=I%20am%20applying%20for%20the%20job" target="_blank" class="apply-btn"><i class="fab fa-whatsapp"></i> Apply Now</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- JOB SEEKERS SECTION -->
+<div class="jobs-container hidden" id="seekers">
+  <h2 class="section-title">People Looking for Work</h2>
+  <div class="jobs-grid">
+
+    <!-- SEEKER 1 - EDIT THIS BLOCK -->
+    <div class="seeker-card">
+      <h3 class="seeker-name" contenteditable="true">John Doe</h3>
+      <div style="margin:8px 0;">
+        <span class="seeker-skill" contenteditable="true">Driver</span>
+        <span class="seeker-skill" contenteditable="true">Boda</span>
+      </div>
+      <p style="color:#555; margin:10px 0;" contenteditable="true">Experienced driver with valid permit. Looking for driving job. Can work any time.</p>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Kampala</span></span>
+        <span><i class="fa-solid fa-phone"></i> <span contenteditable="true">0700 000 000</span></span>
+      </div>
+      <a href="tel:0700000" class="apply-btn" style="background:var(--blue);"><i class="fa-solid fa-phone"></i> Call John</a>
+    </div>
+
+    <!-- SEEKER 2 - EDIT THIS BLOCK -->
+    <div class="seeker-card">
+      <h3 class="seeker-name" contenteditable="true">Mary Nakato</h3>
+      <div style="margin:8px 0;">
+        <span class="seeker-skill" contenteditable="true">Hairdresser</span>
+        <span class="seeker-skill" contenteditable="true">Salon</span>
+      </div>
+      <p style="color:#555; margin:10px 0;" contenteditable="true">Professional hairdresser with 3 years experience. Looking for salon job in Wampewo area.</p>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Wampewo</span></span>
+        <span><i class="fa-solid fa-phone"></i> <span contenteditable="true">0780 000 000</span></span>
+      </div>
+      <a href="tel:0780000000" class="apply-btn" style="background:var(--blue);"><i class="fa-solid fa-phone"></i> Call Mary</a>
+    </div>
+
+    <!-- SEEKER TEMPLATE - COPY TO ADD MORE -->
+    <div class="seeker-card">
+      <h3 class="seeker-name" contenteditable="true">Your Name</h3>
+      <div style="margin:8px 0;">
+        <span class="seeker-skill" contenteditable="true">Your Skill</span>
+      </div>
+      <p style="color:#555; margin:10px 0;" contenteditable="true">Describe your experience and the job you are looking for...</p>
+      <div class="job-details">
+        <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span></span>
+        <span><i class="fa-solid fa-phone"></i> <span contenteditable="true">Phone Number</span></span>
+      </div>
+      <a href="tel:0700000" class="apply-btn" style="background:var(--blue);"><i class="fa-solid fa-phone"></i> Call Me</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- POST JOB CTA -->
+<section class="post-cta" id="post">
+  <h2>Need to Hire Someone?</h2>
+  <p>Post your job vacancy and reach 1000s of job seekers in Kampala</p>
+  <a href="https://wa.me/256752937558?text=I%20want%20to%20post%20a%20job%20vacancy" target="_blank" class="btn" style="background:var(--green); font-size:18px;">Post Job on WhatsApp</a>
+  <a href="https://wa.me/256752937558?text=I%20am%20looking%20for%20a%20job" target="_blank" class="btn" style="background:var(--purple);">I Need a Job</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=Hello%20about%20jobs" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// TAB SWITCH FUNCTION
+function showTab(tabName) {
+  document.getElementById('jobs').classList.add('hidden');
+  document.getElementById('seekers').classList.add('hidden');
+  document.getElementById(tabName).classList.remove('hidden');
+  
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

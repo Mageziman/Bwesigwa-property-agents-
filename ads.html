@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Ads | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif;}
+
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav.logo{font-size:20px; font-weight:800; color:var(--blue);} nav.logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+
+  /* HERO */
+ .ads-hero{background: linear-gradient(rgba(13,71,161,0.85), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200') center/cover; color:white; text-align:center; padding:70px 20px;}
+ .ads-hero h1{font-size:36px; margin-bottom:10px;}
+
+  /* FILTER */
+ .filter-bar{background:var(--light); padding:20px 5%; text-align:center;}
+ .filter-bar input{padding:12px; width:300px; border:2px solid #ddd; border-radius:8px; margin:5px;}
+ .filter-bar button{background:var(--orange); color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-weight:700;}
+
+  /* ADS GRID */
+ .section-title{text-align:center; color:var(--blue); font-size:28px; margin:40px 0 20px;}
+ .ads-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:25px; padding:20px 5% 60px;}
+
+ .ad-card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:.4s; border-top:4px solid var(--orange);}
+ .ad-card:hover{transform:translateY(-8px);}
+ .ad-card img{width:100%; height:200px; object-fit:cover;}
+ .ad-badge{position:absolute; background:var(--orange); color:white; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700; margin:10px;}
+ .ad-body{padding:20px;}
+ .ad-category{color:var(--orange); font-size:12px; font-weight:700; text-transform:uppercase;}
+ .ad-title{font-size:20px; color:var(--blue); margin:8px 0;}
+ .ad-desc{color:#555; font-size:14px; margin-bottom:15px; min-height:50px;}
+ .ad-info{display:flex; gap:10px; margin-bottom:15px; font-size:14px; color:#666;}
+ .ad-info i{color:var(--orange);}
+ .ad-btns{display:flex; gap:10px;}
+ .btn{background:var(--green); color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700; flex:1; text-align:center;}
+ .btn-call{background:var(--blue);}
+ .btn:hover{opacity:0.9;}
+
+  /* CTA */
+ .cta-advertise{background:var(--light); text-align:center; padding:50px 20px;}
+ .cta-advertise.btn{background:var(--orange);}
+
+  /* WHATSAPP FLOAT */
+ .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="advertising.html">Advertise</a>
+    <a href="ads.html">Business Ads</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ads-hero">
+  <h1><i class="fa-solid fa-bullhorn"></i> Business Ads Marketplace</h1>
+  <p>Discover trusted businesses advertising with us in Kampala</p>
+</section>
+
+<!-- FILTER -->
+<section class="filter-bar">
+  <input type="text" id="searchInput" placeholder="Search business, service, or location...">
+  <button onclick="searchAds()"><i class="fa-solid fa-search"></i> Search</button>
+</section>
+
+<!-- ADS LISTING -->
+<section>
+  <h2 class="section-title">Featured Businesses</h2>
+  <div class="ads-grid" id="adsContainer">
+
+    <!-- AD 1 - EDIT THIS -->
+    <div class="ad-card" data-category="food">
+      <span class="ad-badge">FEATURED</span>
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant">
+      <div class="ad-body">
+        <div class="ad-category">Food & Restaurant</div>
+        <h3 class="ad-title" contenteditable="true">Mama's Kitchen - Wampewo</h3>
+        <p class="ad-desc" contenteditable="true">Best local food, Rolex, Chips, Chicken. Fresh meals delivered to your door.</p>
+        <div class="ad-info">
+          <span><i class="fa-solid fa-location-dot"></i> Wampewo</span>
+          <span><i class="fa-solid fa-phone"></i> 0780 000 000</span>
+        </div>
+        <div class="ad-btns">
+          <a href="https://wa.me/256780000?text=Hello%20Mama's%20Kitchen" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0780000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD 2 - EDIT THIS -->
+    <div class="ad-card" data-category="fashion">
+      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600" alt="Clothes">
+      <div class="ad-body">
+        <div class="ad-category">Fashion & Boutique</div>
+        <h3 class="ad-title" contenteditable="true">Classy Styles Boutique</h3>
+        <p class="ad-desc" contenteditable="true">Affordable dresses, shoes, and bags. Both wholesale and retail available.</p>
+        <div class="ad-info">
+          <span><i class="fa-solid fa-location-dot"></i> Kasangati</span>
+          <span><i class="fa-solid fa-phone"></i> 0700 000 000</span>
+        </div>
+        <div class="ad-btns">
+          <a href="https://wa.me/256700000000?text=Hello%20Classy%20Styles" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0700000000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD 3 - EDIT THIS -->
+    <div class="ad-card" data-category="services">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Cleaning">
+      <div class="ad-body">
+        <div class="ad-category">Home Services</div>
+        <h3 class="ad-title" contenteditable="true">Pro Cleaners UG</h3>
+        <p class="ad-desc" contenteditable="true">House cleaning, office cleaning, and fumigation services. Professional team.</p>
+        <div class="ad-info">
+          <span><i class="fa-solid fa-location-dot"></i> Kampala</span>
+          <span><i class="fa-solid fa-phone"></i> 0751 000 000</span>
+        </div>
+        <div class="ad-btns">
+          <a href="https://wa.me/256751000?text=Hello%20Pro%20Cleaners" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0751000000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD 4 - EDIT THIS -->
+    <div class="ad-card" data-category="electronics">
+      <span class="ad-badge">NEW</span>
+      <img src="https://images.unsplash.com/photo-1498049794561-7780e7231716?w=600" alt="Electronics">
+      <div class="ad-body">
+        <div class="ad-category">Electronics</div>
+        <h3 class="ad-title" contenteditable="true">Tech World Uganda</h3>
+        <p class="ad-desc" contenteditable="true">Phones, Laptops, Accessories. 6 months warranty on all products.</p>
+        <div class="ad-info">
+          <span><i class="fa-solid fa-location-dot"></i> Kampala Rd</span>
+          <span><i class="fa-solid fa-phone"></i> 0772 000 000</span>
+        </div>
+        <div class="ad-btns">
+          <a href="https://wa.me/256772000?text=Hello%20Tech%20World" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0772000000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD 5 - TEMPLATE - COPY THIS TO ADD MORE -->
+    <div class="ad-card" data-category="other">
+      <img src="https://via.placeholder.com/600x200/0D47A1/FFFFFF?text=YOUR+BUSINESS+LOGO" alt="Your Business">
+      <div class="ad-body">
+        <div class="ad-category" contenteditable="true">Category: e.g Beauty, Health</div>
+        <h3 class="ad-title" contenteditable="true">Your Business Name Here</h3>
+        <p class="ad-desc" contenteditable="true">Describe your business and services here. Edit this text.</p>
+        <div class="ad-info">
+          <span><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Location</span></span>
+          <span><i class="fa-solid fa-phone"></i> <span contenteditable="true">0700 000 000</span></span>
+        </div>
+        <div class="ad-btns">
+          <a href="https://wa.me/2567XXXXXXXXX?text=Hello" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:0700000000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA TO ADVERTISE -->
+<section class="cta-advertise">
+  <h2>Want Your Business Here?</h2>
+  <p>Get in front of 10,000+ customers in Kampala</p>
+  <a href="advertising.html" class="btn">Advertise With Us</a>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=I%20want%20to%20advertise%20my%20business" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// SIMPLE SEARCH FUNCTION
+function searchAds() {
+  let input = document.getElementById('searchInput').value.toLowerCase();
+  let cards = document.getElementsByClassName('ad-card');
+
+  for(let i = 0; i < cards.length; i++) {
+    let title = cards[i].getElementsByClassName('ad-title')[0].innerText.toLowerCase();
+    let desc = cards[i].getElementsByClassName('ad-desc')[0].innerText.toLowerCase();
+
+    if(title.includes(input) || desc.includes(input)) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

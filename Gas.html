@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas Refilling & Accessories | Bwesigwa Property Agents</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--blue:#0D47A1; --orange:#FF6F00; --green:#25D366; --light:#F5F9FF;}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif; scroll-behavior:smooth;}
+  
+  /* NAV */
+  nav{position:sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000;}
+  nav .logo{font-size:20px; font-weight:800; color:var(--blue);} nav .logo span{color:var(--orange);}
+  nav a{color:var(--blue); text-decoration:none; font-weight:700; margin-left:15px;}
+  
+  /* HERO */
+  .gas-hero{background: linear-gradient(rgba(13,71,161,0.85), rgba(255,111,0,0.8)), url('https://images.unsplash.com/photo-1581094794329-c927dd94c5b1?w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
+  .gas-hero h1{font-size:36px; margin-bottom:10px;}
+  .btn{background:var(--green); color:white; padding:12px 22px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:10px; font-weight:700; transition:.3s;}
+  .btn:hover{background:#128C7E; transform:translateY(-2px);}
+  
+  .banner{background:linear-gradient(90deg, #25D366, #128C7E); color:white; text-align:center; padding:18px; font-size:18px; font-weight:700;}
+  
+  .section-title{text-align:center; color:var(--blue); font-size:28px; margin-bottom:20px; padding-top:40px;}
+  .grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:20px; padding:20px 5% 50px;}
+  
+  /* CARDS */
+  .card{background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.4s;}
+  .card:hover{transform:translateY(-6px);}
+  .card img{width:100%; height:200px; object-fit:cover;}
+  .card-body{padding:15px; text-align:center;}
+  .brand-name{font-size:20px; font-weight:800; color:var(--blue); margin-bottom:5px;}
+  .price-edit{border:2px dashed var(--orange); padding:8px; border-radius:6px; background:#FFF8F0; color:#333; font-weight:600; min-height:40px;}
+  .note{color:#555; font-size:14px; margin-top:8px;}
+  
+  /* BRANCHES */
+  .branches{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px 5% 50px;}
+  .branch{background:var(--light); padding:20px; border-radius:10px; width:280px; text-align:center; border-left:4px solid var(--orange);}
+  
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--green); color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:32px; animation:pulse 2s infinite; z-index:999;}
+  @keyframes pulse{0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);}}
+  
+  footer{background:#111; color:#aaa; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">BWESIGWA <span>PROPERTY AGENTS</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="gas.html">Gas</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="gas-hero">
+  <h1><i class="fa-solid fa-gas-pump"></i> Gas Refilling & Accessories</h1>
+  <p>We refill ALL brands. Any size. Fast delivery in Kampala</p>
+  <a href="https://wa.me/256752937558?text=Hello%20I%20need%20Gas%20Refill" target="_blank" class="btn">Order on WhatsApp</a>
+</section>
+
+<div class="banner">
+  <i class="fa-solid fa-truck-fast"></i> FREE DELIVERY | Branches: WAMPEWO & KASANGATI | Call: 0752 937 558
+</div>
+
+<!-- GAS BRANDS SECTION -->
+<section>
+  <h2 class="section-title">Gas Brands We Refill</h2>
+  <p style="text-align:center; padding:0 5% 20px;">We refill any brand not listed below too. Just send us a photo on WhatsApp</p>
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/0D47A1/FFFFFF?text=SHELL+GAS" alt="Shell Gas">
+      <div class="card-body">
+        <div class="brand-name">SHELL</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Delivery time, deposit info, etc</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20SHELL%20Gas%20Refill" target="_blank" class="btn">Order Shell</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/FF0000/FFFFFF?text=TOTAL+GAS" alt="Total Gas">
+      <div class="card-body">
+        <div class="brand-name">TOTAL</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20TOTAL%20Gas%20Refill" target="_blank" class="btn">Order Total</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/FFA500/000000?text=HASHI+GAS" alt="Hashi Gas">
+      <div class="card-body">
+        <div class="brand-name">HASHI</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20HASHI%20Gas%20Refill" target="_blank" class="btn">Order Hashi</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/006600/FFFFFF?text=HASS+GAS" alt="Hass Gas">
+      <div class="card-body">
+        <div class="brand-name">HASS</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20HASS%20Gas%20Refill" target="_blank" class="btn">Order Hass</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/0047AB/FFFFFF?text=STABEX+GAS" alt="Stabex Gas">
+      <div class="card-body">
+        <div class="brand-name">STABEX</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20STABEX%20Gas%20Refill" target="_blank" class="btn">Order Stabex</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/FF4500/FFFFFF?text=NOVA+GAS" alt="Nova Gas">
+      <div class="card-body">
+        <div class="brand-name">NOVA</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20NOVA%20Gas%20Refill" target="_blank" class="btn">Order Nova</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/800000/FFFFFF?text=ORYX+GAS" alt="Oryx Gas">
+      <div class="card-body">
+        <div class="brand-name">ORYX</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20ORYX%20Gas%20Refill" target="_blank" class="btn">Order Oryx</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200/228B22/FFFFFF?text=GOU+GAS" alt="Gou Gas">
+      <div class="card-body">
+        <div class="brand-name">GOU</div>
+        <div class="price-edit" contenteditable="true">6kg: UGX 00,000 | 13kg: UGX 00,000<br>Edit price here</div>
+        <div class="note" contenteditable="true">Edit this text: Add your info</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20GOU%20Gas%20Refill" target="_blank" class="btn">Order Gou</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581094794329-c927dd94c5b1?w=400" alt="Other Brands">
+      <div class="card-body">
+        <div class="brand-name">OTHER BRANDS</div>
+        <div class="price-edit" contenteditable="true">ANY SIZE | ANY BRAND<br>Send us photo for quote</div>
+        <div class="note">We refill all other brands too. Contact us</div>
+        <a href="https://wa.me/256752937558?text=I%20have%20other%20brand%20cylinder" target="_blank" class="btn">Send Photo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACCESSORIES SECTION -->
+<section style="background:var(--light);">
+  <h2 class="section-title">Gas Accessories</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Horse Pipe">
+      <div class="card-body">
+        <div class="brand-name">HORSE PIPE</div>
+        <div class="price-edit" contenteditable="true">Price: UGX 00,000<br>Edit length & details here</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20Horse%20Pipe" target="_blank" class="btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Grill">
+      <div class="card-body">
+        <div class="brand-name">GRILL</div>
+        <div class="price-edit" contenteditable="true">Price: UGX 00,000<br>Edit size & details here</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20Gas%20Grill" target="_blank" class="btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556909191-1cfd8b8e8e2a?w=400" alt="Burner">
+      <div class="card-body">
+        <div class="brand-name">BURNER</div>
+        <div class="price-edit" contenteditable="true">Price: UGX 00,000<br>1 burner, 2 burner, 3 burner</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20Gas%20Burner" target="_blank" class="btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400" alt="Regulator">
+      <div class="card-body">
+        <div class="brand-name">REGULATOR</div>
+        <div class="price-edit" contenteditable="true">Price: UGX 00,000<br>Low pressure / High pressure</div>
+        <a href="https://wa.me/256752937558?text=I%20want%20Gas%20Regulator" target="_blank" class="btn">Order Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRANCHES SECTION -->
+<section>
+  <h2 class="section-title">Our Branches</h2>
+  <div class="branches">
+    <div class="branch">
+      <i class="fa-solid fa-location-dot" style="color:var(--orange); font-size:30px;"></i>
+      <h3>WAMPEWO BRANCH</h3>
+      <p>Oppst Wampeewo Playground<br>Behind Vine Shoppers Supermarket</p>
+      <a href="tel:0752937558" class="btn">Call 0752 937 558</a>
+    </div>
+    <div class="branch">
+      <i class="fa-solid fa-location-dot" style="color:var(--orange); font-size:30px;"></i>
+      <h3>KASANGATI BRANCH</h3>
+      <div class="price-edit" contenteditable="true">Add Kasangati address here<br>Edit this text</div>
+      <a href="tel:0774712267" class="btn">Call 0774 712 267</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Bwesigwa Property Agents. All Rights Reserved.</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/256752937558?text=Hello%20Bwesigwa%20Property%20Agents" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
